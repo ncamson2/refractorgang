@@ -4,7 +4,11 @@ import 'package:refractorgang/HorizontalList.dart';
 import 'package:refractorgang/HorizontalList2.dart';
 import 'package:refractorgang/NavigationDrawer.dart';
 import 'package:refractorgang/ReusableCard.dart';
+import 'Kilroys.dart';
+import 'ProfilePage.dart';
+import 'QRCodePage.dart';
 import 'TipModel.dart';
+import 'appBarVar.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -89,13 +93,20 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       bottomNavigationBar: BottomAppBar(
         color: Colors.grey[800],
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: const <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(15.0),
+          children: <Widget>[
+            const Padding(
+              padding: EdgeInsets.all(15.0),
+              child: Icon(
+                Icons.home,
+                color: Colors.white,
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(15.0),
               child: Icon(
                 Icons.restaurant,
                 color: Colors.white,
@@ -103,23 +114,38 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Padding(
               padding: const EdgeInsets.all(15.0),
-              child: Icon(
-                Icons.business,
-                color: Colors.white,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const QRCodePage(),
+                    ),
+                  );
+                },
+                child: const Icon(
+                  Icons.qr_code,
+                  color: Colors.white,
+                ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(15.0),
-              child: Icon(
-                Icons.qr_code,
-                color: Colors.white,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Icon(
-                Icons.account_circle,
-                color: Colors.white,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => ProfilePage(),
+                    ),
+                  );
+                },
+                child: Icon(
+                  Icons.account_circle,
+                  color: Colors.white,
+                ),
               ),
             )
           ],

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:refractorgang/MenuPage.dart';
 import 'package:refractorgang/UpStairsPub.dart';
 
 class HorizontalList1 extends StatelessWidget {
@@ -40,8 +39,18 @@ class HorizontalList1 extends StatelessWidget {
                   },
                 ),
               ),
+              const VerticalDivider(
+                color: Colors.transparent,
+                thickness: 4,
+              ),
               const SizedBox(
-                width: 20,
+                width: 2,
+                child:
+                    DecoratedBox(decoration: BoxDecoration(color: Colors.red)),
+              ),
+              const VerticalDivider(
+                color: Colors.transparent,
+                thickness: 4,
               ),
               Stack(children: [
                 Container(
@@ -78,26 +87,89 @@ class HorizontalList1 extends StatelessWidget {
                   ),
                 )
               ]),
+              const VerticalDivider(
+                color: Colors.transparent,
+                thickness: 4,
+              ),
               const SizedBox(
-                width: 20,
+                width: 2,
+                child:
+                    DecoratedBox(decoration: BoxDecoration(color: Colors.red)),
+              ),
+              const VerticalDivider(
+                color: Colors.transparent,
+                thickness: 4,
               ),
               Container(
                 width: 135.0,
+                height: 200,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  image: const DecorationImage(
+                      image: AssetImage(
+                          '/Users/nickcamson/refractorgang/lib/assets/BigSaleGANGgang.jpeg'),
+                      fit: BoxFit.cover),
                   borderRadius: BorderRadius.circular(15),
                 ),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const UpStairsPub(),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              const VerticalDivider(
+                color: Colors.transparent,
+                thickness: 4,
               ),
               const SizedBox(
-                width: 20,
+                width: 2,
+                child:
+                    DecoratedBox(decoration: BoxDecoration(color: Colors.red)),
               ),
-              Container(
-                width: 135.0,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
+              const VerticalDivider(
+                color: Colors.transparent,
+                thickness: 4,
+              ),
+              Stack(children: [
+                Container(
+                  width: 135.0,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    image: const DecorationImage(
+                        image: AssetImage(
+                            '/Users/nickcamson/refractorgang/lib/assets/PeopleChillin.jpeg'),
+                        fit: BoxFit.cover),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const UpStairsPub(),
+                        ),
+                      );
+                    },
+                  ),
                 ),
-              ),
+                const Center(
+                  heightFactor: 3,
+                  child: Text(
+                    '                   Friends',
+                    style: TextStyle(
+                        color: Colors.red,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic,
+                        fontSize: 10),
+                  ),
+                )
+              ]),
             ],
           ),
         ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:refractorgang/MenuPage.dart';
+import 'package:refractorgang/MyHomePage.dart';
 import 'NavigationDrawer.dart';
 import '';
 
@@ -37,7 +37,9 @@ class _TipModelState extends State<TipModel> {
 
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const MenuPage(),
+                        builder: (context) => const MyHomePage(
+                          title: '',
+                        ),
                       ),
                     );
                   })

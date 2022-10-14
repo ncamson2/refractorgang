@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:refractorgang/MenuPage.dart';
 import 'package:refractorgang/UpStairsPub.dart';
 
 class HorizontalList2 extends StatelessWidget {
@@ -15,108 +14,132 @@ class HorizontalList2 extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Expanded(
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: <Widget>[
-              Container(
-                width: 135.0,
-                height: 200,
-                decoration: BoxDecoration(
-                  image: const DecorationImage(
-                      image: AssetImage(
-                          '/Users/nickcamson/refractorgang/lib/assets/BeerThing.jpg'),
-                      fit: BoxFit.cover),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
+          child: ListView(scrollDirection: Axis.horizontal, children: <Widget>[
+            Container(
+              width: 135.0,
+              height: 200,
+              decoration: BoxDecoration(
+                image: const DecorationImage(
+                    image: AssetImage(
+                        '/Users/nickcamson/refractorgang/lib/assets/BeerThing.jpg'),
+                    fit: BoxFit.cover),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
 
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const UpStairsPub(),
-                      ),
-                    );
-                  },
-                ),
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const UpStairsPub(),
+                    ),
+                  );
+                },
               ),
-              const SizedBox(
-                width: 20,
+            ),
+            const VerticalDivider(
+              color: Colors.transparent,
+              thickness: 4,
+            ),
+            const SizedBox(
+              width: 2,
+              child: DecoratedBox(decoration: BoxDecoration(color: Colors.red)),
+            ),
+            const VerticalDivider(
+              color: Colors.transparent,
+              thickness: 4,
+            ),
+            Container(
+              width: 135.0,
+              height: 200,
+              decoration: BoxDecoration(
+                image: const DecorationImage(
+                    image: AssetImage(
+                        '/Users/nickcamson/refractorgang/lib/assets/burgerRefractor.jpeg'),
+                    fit: BoxFit.cover),
+                borderRadius: BorderRadius.circular(15),
               ),
-              Container(
-                width: 135.0,
-                height: 200,
-                decoration: BoxDecoration(
-                  image: const DecorationImage(
-                      image: AssetImage(
-                          '/Users/nickcamson/refractorgang/lib/assets/burgerRefractor.jpeg'),
-                      fit: BoxFit.cover),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
 
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const UpStairsPub(),
-                      ),
-                    );
-                  },
-                ),
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const UpStairsPub(),
+                    ),
+                  );
+                },
               ),
-              const SizedBox(
-                width: 20,
+            ),
+            const VerticalDivider(
+              color: Colors.transparent,
+              thickness: 4,
+            ),
+            const SizedBox(
+              width: 2,
+              child: DecoratedBox(decoration: BoxDecoration(color: Colors.red)),
+            ),
+            const VerticalDivider(
+              color: Colors.transparent,
+              thickness: 4,
+            ),
+            Container(
+              width: 135.0,
+              height: 200,
+              decoration: BoxDecoration(
+                image: const DecorationImage(
+                    image: AssetImage(
+                        '/Users/nickcamson/refractorgang/lib/assets/BeerThing.jpg'),
+                    fit: BoxFit.cover),
+                borderRadius: BorderRadius.circular(15),
               ),
-              Container(
-                width: 135.0,
-                height: 200,
-                decoration: BoxDecoration(
-                  image: const DecorationImage(
-                      image: AssetImage(
-                          '/Users/nickcamson/refractorgang/lib/assets/BeerThing.jpg'),
-                      fit: BoxFit.cover),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
 
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const UpStairsPub(),
-                      ),
-                    );
-                  },
-                ),
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const UpStairsPub(),
+                    ),
+                  );
+                },
               ),
-              const SizedBox(
-                width: 20,
+            ),
+            const VerticalDivider(
+              color: Colors.transparent,
+              thickness: 4,
+            ),
+            const SizedBox(
+              width: 2,
+              child: DecoratedBox(decoration: BoxDecoration(color: Colors.red)),
+            ),
+            const VerticalDivider(
+              color: Colors.transparent,
+              thickness: 4,
+            ),
+            Container(
+              width: 135.0,
+              height: 200,
+              decoration: BoxDecoration(
+                image: const DecorationImage(
+                    image: AssetImage(
+                        '/Users/nickcamson/refractorgang/lib/assets/burgerRefractor.jpeg'),
+                    fit: BoxFit.cover),
+                borderRadius: BorderRadius.circular(15),
               ),
-              Container(
-                width: 135.0,
-                height: 200,
-                decoration: BoxDecoration(
-                  image: const DecorationImage(
-                      image: AssetImage(
-                          '/Users/nickcamson/refractorgang/lib/assets/burgerRefractor.jpeg'),
-                      fit: BoxFit.cover),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
 
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const UpStairsPub(),
-                      ),
-                    );
-                  },
-                ),
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const UpStairsPub(),
+                    ),
+                  );
+                },
               ),
-            ],
-          ),
+            ),
+          ]),
         ),
       ),
     );

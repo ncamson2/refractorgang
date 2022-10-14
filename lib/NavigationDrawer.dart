@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:refractorgang/BishopBar.dart';
 import 'package:refractorgang/Kilroys.dart';
-import 'package:refractorgang/MenuPage.dart';
 import 'package:refractorgang/MyHomePage.dart';
 
 class NavigationDrawer extends StatelessWidget {
@@ -178,7 +177,15 @@ class NavigationDrawer extends StatelessWidget {
               'Brothers',
               style: TextStyle(color: Colors.grey),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const KilorysPage(),
+                ),
+              );
+            },
           ),
           ListTile(
             title: const Text(

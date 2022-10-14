@@ -59,11 +59,22 @@ class _KilorysPageState extends State<KilorysPage> {
               physics: const AlwaysScrollableScrollPhysics(),
               scrollDirection: Axis.vertical,
               itemBuilder: (BuildContext context, int index) {
-                return Card(
-                  color: Colors.white,
-                  child: Center(
-                    child: Text(
-                      'Menu Item $index',
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const KilorysPage(),
+                      ),
+                    );
+                  },
+                  child: Card(
+                    color: Colors.white,
+                    child: Center(
+                      child: Text(
+                        'Menu Item $index',
+                      ),
                     ),
                   ),
                 );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'MenuPage.dart';
+
+import 'MyHomePage.dart';
 import 'NavigationDrawer.dart';
 import 'TipModel.dart';
 
@@ -11,6 +12,7 @@ class UpStairsPub extends StatefulWidget {
 }
 
 class _UpStairsPubState extends State<UpStairsPub> {
+  @override
   int _selectedIndex = 0;
   void _onItemTapped(int index) {
     setState(() {
@@ -24,7 +26,7 @@ class _UpStairsPubState extends State<UpStairsPub> {
         appBar: AppBar(
             iconTheme: const IconThemeData(color: Colors.black),
             title: const Text(
-              "Up Stairs Pub",
+              "Upstairs Pub",
               style:
                   TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
             ),
@@ -37,7 +39,9 @@ class _UpStairsPubState extends State<UpStairsPub> {
 
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const MenuPage(),
+                        builder: (context) => const MyHomePage(
+                          title: '',
+                        ),
                       ),
                     );
                   })
@@ -55,11 +59,22 @@ class _UpStairsPubState extends State<UpStairsPub> {
               physics: const AlwaysScrollableScrollPhysics(),
               scrollDirection: Axis.vertical,
               itemBuilder: (BuildContext context, int index) {
-                return Card(
-                  color: Colors.white,
-                  child: Center(
-                    child: Text(
-                      'Menu Item $index',
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const UpStairsPub(),
+                      ),
+                    );
+                  },
+                  child: Card(
+                    color: Colors.white,
+                    child: Center(
+                      child: Text(
+                        'Menu Item $index',
+                      ),
                     ),
                   ),
                 );

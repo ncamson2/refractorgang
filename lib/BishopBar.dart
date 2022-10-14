@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'MenuPage.dart';
+import 'package:refractorgang/MyHomePage.dart';
 import 'NavigationDrawer.dart';
 import 'TipModel.dart';
 
@@ -37,7 +37,9 @@ class _BishopBarState extends State<BishopBar> {
 
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const MenuPage(),
+                        builder: (context) => const MyHomePage(
+                          title: '',
+                        ),
                       ),
                     );
                   })

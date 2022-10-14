@@ -68,6 +68,8 @@ flutter:
       - /Users/nickcamson/refractorgang/lib/assets/burgerRefractor.jpeg
       - /Users/nickcamson/refractorgang/lib/assets/PeopleChillin.jpeg
       - /Users/nickcamson/refractorgang/lib/assets/BigSaleGANGgang.jpeg
+      - /Users/nickcamson/refractorgang/lib/assets/ChiSky.jpeg
+      - /Users/nickcamson/refractorgang/lib/assets/KrawlLogo.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
